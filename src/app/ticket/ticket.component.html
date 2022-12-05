@@ -1,0 +1,28 @@
+<div class="d">
+
+  <div class="ticket">
+    <mat-card class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="e_image"></div>
+        <mat-card-title>{{data[1]}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="imagePreview" >
+      <mat-card-content>
+        <p>
+          Tipo de suscripcion: {{data[2]}}
+          <br>
+          Direccion: {{data[3]}}
+          <br>
+          Fecha de inicio: {{data[4]}}
+          <br>
+          Suscripcion expira: {{data[5]}}
+
+        </p>
+        <div style="margin: auto;">
+          <ngx-qrcode  [elementType]="tipoElemento" [value]="data[0]"> </ngx-qrcode>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <button mat-button color="warn" onclick="window.print();">PRINT</button>
+  </div>
+</div>

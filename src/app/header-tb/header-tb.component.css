@@ -1,0 +1,86 @@
+.bg-dark{
+  background: #000000 ;
+  color: aliceblue;
+  margin-top: 0px;
+}
+
+
+.dr{
+  height : 80%;
+  margin-left: 200px;
+
+}
+.row{
+  margin-left: 60%;
+
+}
+
+.ti{
+  height: 10px;
+}
+
+
+a.sidenav-button{
+  display: inline;
+  color: rgba(255, 101, 101, 0.785);
+  margin-right: 10px;
+  transition: all .3s ease 0s;
+  margin-left: 10px;
+}
+
+a.sidenav-button:hover {
+  color: rgba(154, 60, 60, 0.8);
+  transition: all .3 ease 0s;
+}
+
+
+.navbar .photo{
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.navbar a.navbar-brand{
+  color: rgb(255, 252, 240);
+  font-weight: 500;
+}
+
+.navbar .photo img{
+  width: 100%;
+}
+
+.usuario{
+  margin-left: 800px;
+}
+
+nav{
+  margin-top: 19px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.785);
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}

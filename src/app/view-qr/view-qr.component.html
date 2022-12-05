@@ -1,0 +1,64 @@
+<div class="member">
+
+
+
+  <div class="scanner" >
+    <ngx-scanner-qrcode #action="scanner" class=""></ngx-scanner-qrcode>
+
+
+    <label class="data" id="txt" >
+      {{ action.data | async }}
+
+    </label>
+
+    <div #butto2 id="buttonCard2" class="btnGuardar">
+
+    <button  mat-flat-button color="warn" type="submit"  (click)="onSavePost()"><i
+        class="fas fa-camera" ></i> CAPTURAR</button>
+        <button mat-flat-button color="warn" (click)="action.stop()"
+        class="button" onclick="location.reload()">{{'Stop'}} </button>
+        <div #label id="labelv" style="visibility: hidden;">
+
+        <label style="color: red; margin-left: 10px;">Por favor ingrese codigo QR valido</label>
+      </div>
+
+    </div>
+
+
+    <p *ngIf="action.isLoading" style="color: whitesmoke;">Cargando...</p>
+
+
+    <div #button id="buttonCard">
+
+      <button mat-flat-button color="warn" (click)="action.start()" (click)="change()"
+        class="button" (click)="change2()">{{'Start'}} </button>
+    </div>
+
+  </div>
+
+
+  <div #card id="cardv" class="d">
+
+    <mat-card class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="e_image"></div>
+        <mat-card-title>{{data[1]}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image [src]="imagePreview" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          Tipo de suscripcion: {{data[2]}}
+          <br>
+          Direccion: {{data[3]}}
+          <br>
+          Fecha de inicio: {{data[4]}}
+          <br>
+          Suscripcion expira: {{data[5]}}
+
+        </p>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+
+</div>

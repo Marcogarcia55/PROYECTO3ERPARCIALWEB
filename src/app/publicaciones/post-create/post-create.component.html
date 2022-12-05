@@ -1,0 +1,91 @@
+
+<div class="div2">
+  <img src="/assets/images/wgim.webp" class="im">
+<mat-card>
+  <form [formGroup]="form" (submit)="onSavePost()" >
+    <mat-form-field appearance="outline" class="c">
+
+      <input
+      matInput
+      type="text"
+      formControlName="nombre"
+      placeholder="Nombre">
+      <mat-error *ngIf="form.get('nombre').invalid">Por favor ingrese el nombre</mat-error>
+      <mat-label> Ingresa Nombre </mat-label>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="c">
+
+      <input
+      matInput
+      type="text"
+      formControlName="direccion"
+      placeholder="Direccion">
+      <mat-error *ngIf="form.get('direccion').invalid">Por favor ingrese la dirección</mat-error>
+      <mat-label> Ingresa Direccion </mat-label>
+
+    </mat-form-field>
+
+
+
+    <div>
+      <button mat-stroked-button type="button" (click)="filePicker.click()">
+        Selecciona imagen
+      </button>
+      <input type="file" #filePicker (change)="onImagePicked($event)">
+    </div>
+
+    <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview && form.get('image').valid" >
+      <center>
+        <img [src]="imagePreview" [alt]="form.value.title" class="ima">
+      </center>
+    </div>
+    <mat-error *ngIf="form.get('image').invalid && imagePreview">Por favor ingrese una imagen</mat-error>
+
+
+
+
+
+    <mat-form-field appearance="outline" class="c">
+      <mat-label>MEMBRESIA</mat-label>
+      <mat-select
+      (selectionChange)="ngOnChanges($event)"
+      matInput
+      name="suscripcion"
+      formControlName="suscripcion"
+      [(value)]="seleccionado">
+        <mat-option *ngFor="let tipos of tipo" [value]="tipos.value">
+          {{tipos.viewValue}}
+        </mat-option>
+      </mat-select>
+      <mat-error aria-required="false">Por favor ingrese el tipo de suscripción</mat-error>
+    </mat-form-field>
+
+
+
+    <label>
+      Fecha inicio:
+      {{fecha}}
+    </label>
+    <br>
+    <label style="width: 150px;">
+      Fecha Fin:
+      {{fin}}
+    </label>
+
+
+    <button
+    mat-flat-button
+    color= "warn"
+    type="submit"
+    class="btnGuardar"
+    (click)="getFormattedDate()"
+    >Guardar Post</button>
+
+  </form>
+
+</mat-card>
+
+
+</div>

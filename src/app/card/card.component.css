@@ -1,0 +1,51 @@
+
+.card {
+  margin-top: 220px;
+  margin-left: 14%;
+  max-width: 400px;
+  background-color: rgb(253, 0, 0);
+  border-radius: 0px;
+  float: left;
+  position: absolute;
+}
+
+.card2 {
+  margin-top: 220px;
+  margin-left: 43%;
+  max-width: 350px;
+  background-color: rgb(253, 0, 0);
+  border-radius: 0px;
+  position: absolute;
+
+}
+
+.card3 {
+  margin-top: 220px;
+  margin-left: 68%;
+  max-width: 350px;
+  background-color: rgb(253, 0, 0);
+  border-radius: 0px;
+  position: absolute;
+
+}
+
+.button{
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.button:hover{
+  color: rgba(9, 9, 9, 0.8);
+  background-color: rgb(187, 92, 70);
+  transition: all .3 ease 0s;
+}
+
+.text{
+  font-size: 20px;
+  color: aliceblue;
+  font-weight: 500;
+  font-family: Helvetica;
+
+}

@@ -1,0 +1,53 @@
+.div1{
+  margin-bottom: 0%;
+  width: 76%;
+  height: 90%;
+  color: aliceblue;
+}
+
+.div2{
+  margin-left: 2%;
+  height: 240px;
+  background-color: rgb(9, 9, 9);
+}
+
+.div3{
+
+  width: 131%;
+  height: 800px;
+  background-color: #FCB823;
+}
+
+.div4{
+
+  margin-left: 52%;
+}
+
+.ca{
+  margin-left: 24%;
+  margin-top: 100px;
+  height: 450px;
+}
+
+.subti{
+  margin-left: 38%;
+  margin-top: 4%;
+  font-size: 50px;
+  font-family: Helvetica;
+  color: white;
+}
+
+.carousel{
+  width: 100%;
+  margin-left: 15%;
+
+}
+
+.carousel-control-prev{
+  margin-left: 10%;
+}
+.b2{
+  margin-left: 0%;
+}
+
+

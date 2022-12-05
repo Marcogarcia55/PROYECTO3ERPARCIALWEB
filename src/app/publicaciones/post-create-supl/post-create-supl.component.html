@@ -1,0 +1,84 @@
+
+<div class="div2">
+  <img src="/assets/images/sup.png" class="im">
+<mat-card>
+  <form [formGroup]="form" (submit)="onSavePost()" >
+    <mat-form-field appearance="outline" class="c">
+
+      <input
+      matInput
+      type="text"
+      formControlName="marca"
+      placeholder="marca">
+      <mat-error *ngIf="form.get('marca').invalid">Por favor ingrese la marca</mat-error>
+      <mat-label> Ingresa Marca </mat-label>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="c">
+
+      <input
+      matInput
+      type="text"
+      formControlName="nombre"
+      placeholder="Nombre">
+      <mat-error *ngIf="form.get('nombre').invalid">Por favor ingrese el nombre</mat-error>
+      <mat-label> Ingresa el nombre </mat-label>
+
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="c">
+
+      <input
+      matInput
+      type="text"
+      formControlName="descripcion"
+      placeholder="Descripcion">
+      <mat-error *ngIf="form.get('descripcion').invalid">Por favor ingrese la descripcion</mat-error>
+      <mat-label> Ingresa la descripcion </mat-label>
+
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="c">
+
+      <input
+      matInput
+      type="number"
+      formControlName="precio"
+      placeholder="Precio">
+      <mat-error *ngIf="form.get('precio').invalid">Por favor ingrese el precio</mat-error>
+      <mat-label> Ingresa el precio </mat-label>
+
+    </mat-form-field>
+
+
+
+    <div>
+      <button mat-stroked-button type="button" (click)="filePicker.click()">
+        Selecciona imagen
+      </button>
+      <input type="file" #filePicker (change)="onImagePicked($event)">
+    </div>
+
+    <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview && form.get('image').valid" >
+      <center>
+        <img [src]="imagePreview" [alt]="form.value.nombre" class="ima">
+      </center>
+    </div>
+    <mat-error *ngIf="form.get('image').invalid && imagePreview">Por favor ingrese una imagen</mat-error>
+
+
+
+    <button
+    mat-flat-button
+    color= "warn"
+    type="submit"
+    class="btnGuardar"
+    >Guardar Post</button>
+
+  </form>
+
+</mat-card>
+
+
+</div>

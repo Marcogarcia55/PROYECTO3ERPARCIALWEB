@@ -1,0 +1,19 @@
+<app-header-tb [inputSideNav]= "sideNav"></app-header-tb>
+<mat-sidenav-container class="c">
+  <mat-sidenav #sideNav mode="side"class="sd">
+    <app-side-nav [inputSideNav]= "sideNav">
+
+    </app-side-nav>
+  </mat-sidenav>
+  <mat-sidenav-content >
+
+    <router-outlet>
+      <app-spinner></app-spinner>
+
+    </router-outlet>
+    <app-footer>
+
+    </app-footer>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

@@ -1,0 +1,5 @@
+@import 'http://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css';
+@import '~bootstrap/dist/css/bootstrap.css';
+.swal2-styled.swal2-cancel {
+  background:brown !important
+}

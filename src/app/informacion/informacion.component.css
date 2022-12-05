@@ -1,0 +1,25 @@
+.infoGym{
+  width: 100%;
+  height: 900px;
+  z-index: 10;
+
+}
+
+.lugar{
+  width: 600px;
+  margin-left: 580px;
+  background-color: white;
+  border-radius: 50px;
+  z-index: 10;
+}
+
+iframe{
+  margin-top: 30px;
+}
+
+.img{
+  z-index: -1;
+  position: absolute;
+  height: 80%;
+  width: 100%;
+}
